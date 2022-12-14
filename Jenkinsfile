@@ -1,7 +1,7 @@
 node{
 
                  stage('Clone repo'){
-                 git branch: 'main', credentialsId: 'Githubcredentials', url: 'https://github.com/Ravitejano1/SRE_Task.git'
+                 git branch: 'main', credentialsId: 'Githubcredentials', url: 'https://github.com/balasivasai/SRE_Task.git'
                 }
 
                 stage('Maven Build'){
@@ -29,7 +29,7 @@ node{
                         ],
                                 credentialsId: 'nexus3',
                                 groupId: 'in.ravi',
-                                nexusUrl: 'http://54.221.191.23:8081/repository/Sidgsrelease/',
+                                nexusUrl: 'http://54.152.82.129:8081/repository/Sidgsrelease/',
                                 nexusVersion: 'nexus3',
                                 repository: 'Sidgsrelease/',
                                 protocol: 'http',
